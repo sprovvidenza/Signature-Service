@@ -3,8 +3,8 @@ package api
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/domain"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/service"
+	"github.com/sprovvidenza/Signature-Service/domain"
+	"github.com/sprovvidenza/Signature-Service/service"
 	"io"
 	"net/http"
 )

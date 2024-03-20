@@ -2,8 +2,8 @@ package api
 
 import (
 	"encoding/json"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/persistence"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/service"
+	"github.com/sprovvidenza/Signature-Service/persistence"
+	"github.com/sprovvidenza/Signature-Service/service"
 	"net/http"
 )
 

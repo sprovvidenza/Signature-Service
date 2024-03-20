@@ -1,7 +1,7 @@
 package persistence
 
 import (
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/domain"
+	"github.com/sprovvidenza/Signature-Service/domain"
 	"log"
 )
 
@@ -34,6 +34,14 @@ func (rep *DeviceInMemoryRepo) FindById(id string) (domain.DeviceEntity, bool) {
 	return device, ok
 }
 
+func (rep *DeviceInMemoryRepo) UpdateCounterById(id string) (domain.DeviceEntity, bool) {
+	device, ok := rep.data[id]
+	device.SignCounter += 1
+	rep.data[id] = device
+	log.Printf("Update counter for device %s at %s \n", id, device.SignCounter)
+	return device, ok
+}
+
 func (rep *DeviceInMemoryRepo) FindAll() []domain.DeviceEntity {
 	var values []domain.DeviceEntity
 	for _, v := range rep.data {
@@ -41,12 +49,4 @@ func (rep *DeviceInMemoryRepo) FindAll() []domain.DeviceEntity {
 	}
 	log.Printf("Retrive all device")
 	return values
-}
-
-func (rep *DeviceInMemoryRepo) UpdateCounterById(id string) (domain.DeviceEntity, bool) {
-	device, ok := rep.data[id]
-	device.SignCounter += 1
-	rep.data[id] = device
-	log.Printf("Update counter for device %s at %s \n", id, device.SignCounter)
-	return device, ok
 }

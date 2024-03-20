@@ -1,9 +1,9 @@
 package api
 
 import (
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/crypto"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/domain"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/service"
+	"github.com/sprovvidenza/Signature-Service/crypto"
+	"github.com/sprovvidenza/Signature-Service/domain"
+	"github.com/sprovvidenza/Signature-Service/service"
 )
 
 // Generic interface to configure the algorithm supported

@@ -3,8 +3,8 @@ package service
 import (
 	"errors"
 	"fmt"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/crypto"
-	"github.com/fiskaly/coding-challenges/signing-service-challenge/domain"
+	"github.com/sprovvidenza/Signature-Service/crypto"
+	"github.com/sprovvidenza/Signature-Service/domain"
 	"log"
 )
 
